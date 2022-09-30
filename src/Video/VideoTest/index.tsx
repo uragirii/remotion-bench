@@ -1,4 +1,4 @@
-import {AbsoluteFill, Video} from 'remotion';
+import {AbsoluteFill, useVideoConfig, Video} from 'remotion';
 
 const overlayTest: React.CSSProperties = {
 	position: 'absolute',
@@ -11,13 +11,23 @@ const overlayTest: React.CSSProperties = {
 	display: 'flex',
 	justifyContent: 'center',
 	alignItems: 'center',
+	textAlign: 'center',
 };
 
 const VideoTest = () => {
+	const {fps} = useVideoConfig();
+
 	return (
 		<AbsoluteFill>
-			<Video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" />
-			<span style={overlayTest}>This test is displayed over the video</span>
+			<Video
+				startFrom={fps * 20}
+				endAt={fps * 30}
+				volume={0.5}
+				src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+			/>
+			<span style={overlayTest}>
+				This is video test. This text should appear on top of video
+			</span>
 		</AbsoluteFill>
 	);
 };
