@@ -1,5 +1,6 @@
 import {Audio, Series} from 'remotion';
 import CanvasTest from './CanvasTest';
+import CSSTest from './CSSTest';
 import {Introduction} from './Introduction';
 import VideoTest from './VideoTest';
 
@@ -17,6 +18,9 @@ const Remotion = () => {
 				</Series.Sequence>
 				<Series.Sequence durationInFrames={5 * fps}>
 					<CanvasTest />
+				</Series.Sequence>
+				<Series.Sequence durationInFrames={6 * fps}>
+					<CSSTest />
 				</Series.Sequence>
 			</Series>
 			<Audio

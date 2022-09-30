@@ -29,7 +29,7 @@ const CanvasTest = () => {
 		const centerX = interpolate(
 			frame,
 			[0, 5 * fps],
-			[height * 0.3 + 2, width - height * 0.5 - 2]
+			[height * 0.3 + 1, width - height * 0.5 - 1]
 		);
 
 		const centerY = height / 2;
