@@ -15,12 +15,6 @@ export const RemotionVideo: React.FC = () => {
 				fps={30}
 				width={1920}
 				height={1080}
-				// You can override these props for each render:
-				// https://www.remotion.dev/docs/parametrized-rendering
-				defaultProps={{
-					titleText: 'Remotion Testing Video',
-					titleColor: 'black',
-				}}
 			/>
 		</>
 	);

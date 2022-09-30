@@ -1,4 +1,4 @@
-import {Series} from 'remotion';
+import {Audio, Series} from 'remotion';
 import CanvasTest from './CanvasTest';
 import {Introduction} from './Introduction';
 import VideoTest from './VideoTest';
@@ -19,6 +19,10 @@ const Remotion = () => {
 					<CanvasTest />
 				</Series.Sequence>
 			</Series>
+			<Audio
+				src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/viper.mp3"
+				volume={0.2}
+			/>
 		</>
 	);
 };
